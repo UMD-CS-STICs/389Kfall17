@@ -1,11 +1,25 @@
-# CMSC389K: <br> Full-stack Web Development with Node.js 
-## Prerequisites: C- or better in CMSC216 and CMSC250
-## Credits: 1
+# CMSC389K: Full-stack Web Development with Node.js 
+
+![Imgur](http://i.imgur.com/19j0ajP.png)
 
 ## Course Description
+
 This course provides a comprehensive, practical introduction to modern full-stack web development using JavaScript and Node.js. The course will start with HTML/CSS/JavaScript. Then, we will move into Node.js and learn how to build back-end applications. Finally, we will learn about Express.js (server-side development framework) and MongoDB (database) in order to create a complete web application.
 
-## Textbooks (None)
+## Course Details
+
+- **Course**: [CMSC389K](https://ntst.umd.edu/soc/search?courseId=cmsc389k&sectionId=&termId=201708&_openSectionsOnly=on&creditCompare=&credits=&courseLevelFilter=ALL&instructor=&_facetoface=on&_blended=on&_online=on&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&teachingCenter=ALL&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on)
+- **Prerequisites**: C- or better in CMSC216 and CMSC250
+- **Credits**: 1
+- **Seats**: 30
+- **Lecture Time**: Fridays, 3-3:50PM
+- **Location**: CSI 3118
+- **Semester**: Fall 2017
+- **Textbook**: None
+- **Course Facilitators**: [Ishaan Parikh](https://www.linkedin.com/in/iparikh) and [Sashank Thupukari](https://www.linkedin.com/in/sthupukari)
+- **Faculty Advisor**: [John Dickerson](http://jpdickerson.com/)
+- **Syllabus Last Updated**: May 24, 2017
+
 ## Topics Covered
 - HTML and CSS
 - JavaScript (+ECMAScript 2015 (E6))
