@@ -236,7 +236,7 @@ You will need to implement the following routes. All API routes are under `/api`
   1. The `poke.json` file with the weakness removed so changes are saved to disk (and persist even if the server is reloaded). 
   2. The global `_DATA` object, so that subsequent requests will use the updated data.
 
-  Return an objecect with the name and updated Pokemon weakness array. Order **Order all all other weaknesses should be maintained.**
+  Return an objecect with the name and updated Pokemon weakness array. **Order all all other weaknesses should be maintained.**
 
   If the Pokemon does not exist, return an empty object. 
 
