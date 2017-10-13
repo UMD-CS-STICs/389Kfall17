@@ -50,13 +50,13 @@ function reverseString(str){
  }
 
 /*
- * Function 5: stringToArr -> Given a string that has comma + whitespace
+ * Function 5: Given a string that has comma + whitespace
  *     separated values, and creates an array containing all the elements.
  *      Example:
  *          'hello, my,   name, is ,nelsOn' ->
  *          ['hello','my','name','is','nels0n']
  *      Then, apply the second argument of the function (another function)
- *      to the array. Return this result.
+ *      to each element in the array. Return this result.
  *      You will have to write your own tests to see if this function works.
  *
  */
