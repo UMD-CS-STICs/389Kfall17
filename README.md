@@ -18,7 +18,7 @@ This course provides a comprehensive, practical introduction to modern full-stac
 - **Textbook**: None
 - **Course Facilitators**: [Ishaan Parikh](https://www.linkedin.com/in/iparikh) and [Sashank Thupukari](https://www.linkedin.com/in/sthupukari)
 - **Faculty Advisor**: [John Dickerson](http://jpdickerson.com/)
-- **Syllabus Last Updated**: May 24, 2017
+- **Syllabus Last Updated**: October 18, 2017
 
 ## Topics Covered
 - HTML and CSS
