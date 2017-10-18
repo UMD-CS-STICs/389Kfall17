@@ -65,10 +65,10 @@ will be considered afterwards.
 | 5 (9/29) | Express.js | P3 DUE, Pokémon API (P4) OUT |
 | 6 (10/6) | Express.js (cont.) | |
 | 7 (10/13) | Express.js (cont.) | P4 DUE |
-| 8 (10/20) | Midterm | Representatives Website (P5) OUT |
-| 9 (10/27) | Databases | P5 DUE |
-| 10 (11/3) | Databases (cont.) | Final Project OUT |
-| 11 (11/10) | Mega Boilerplate | |
+| 8 (10/20) | Midterm Review | Representatives Website (P5) OUT |
+| 9 (10/27) | Midterm | |
+| 10 (11/3) | Databases | P5 DUE, Final Project OUT |
+| 11 (11/10) | Databases (cont.) | |
 | 12 (11/17) | Web Sockets | |
 | BREAK (11/24) |  | |
 | 13 (12/1) | Now + Lab | |
