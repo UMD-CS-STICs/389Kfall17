@@ -10,7 +10,7 @@ The goal of the game is to input all 50 states within a time limit. If the user 
 Learn how to use Javascript to interact with the DOM. Practice using AJAX to interact with APIs.
 
 ## Grading
-This project will use a **feature based** grading system (out of 68 points).
+This project will use a **feature based** grading system (out of 78 points).
 
 Points are gained by implementing features.
 
