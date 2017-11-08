@@ -67,8 +67,8 @@ will be considered afterwards.
 | 7 (10/13) | Express.js (cont.) | P4 DUE |
 | 8 (10/20) | Midterm Review | Representatives Website (P5) OUT |
 | 9 (10/27) | Midterm | |
-| 10 (11/3) | Databases | P5 DUE, Final Project OUT |
-| 11 (11/10) | Databases (cont.) | |
+| 10 (11/3) | Databases | P5 DUE |
+| 11 (11/10) | Databases (cont.) | Final Project OUT |
 | 12 (11/17) | Web Sockets | |
 | BREAK (11/24) |  | |
 | 13 (12/1) | Now + Lab | |
