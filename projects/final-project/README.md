@@ -220,7 +220,7 @@ There is a provided a shell that has all the dependencies you need set up. We ha
 
 ### Submission
 
-We will be using [now](https://zeit.co/now) to submit one link per project. We will go over how to use this in class on 4/28.
+We will be using [now](https://zeit.co/now) to submit one link per project. We will go over how to use this in class on 12/1.
 
 ### Additional Comments
 
