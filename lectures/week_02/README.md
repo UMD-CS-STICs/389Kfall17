@@ -14,9 +14,9 @@ During class, we will go over **objects** and **function**, which are very impor
 
 We will build an example with students/Nelson and their ages.
 
-Arrays in JavaScript are heterogeneous. This means that they can hold data of different types. For example, `var a = [1, 'hello', function () { return 1; }]` is valid.
+Arrays in JavaScript are heterogeneous. This means that they can hold data of different types. For example, `var a = [1, 'hello', function () { return 1; }]` is valid even though the array has an integer, then a string, followed by a function..
 
-First, we can create an array of student names:
+First, we can create an array of student names (not heterogeneous):
 
 ```javascript
 var names = ["Nelson", "Rachel", "Megan"];
@@ -24,15 +24,18 @@ var names = ["Nelson", "Rachel", "Megan"];
 
 If we need to print everyone's names, we can use a for loop. We can use a standard for loop or a for-each loop.
 
+A for-each would look like the following:
 ```javascript
 // Output:
 // 0
 // 1
 // 2
 for(var i in names) {
-    console.log(i);
+    console.log(i); // console.log() is how we print to the console
 }
-
+```
+We see that `i` contains the index of each element, not the value. This means that if we wanted to print all the elements in the array using this type of loop, we would have to do something like the following:
+```javascript
 // Output:
 // "Nelson"
 // "Rachel"
@@ -40,7 +43,9 @@ for(var i in names) {
 for(var i in names) {
     console.log(arr[i]);
 }
-
+```
+A standard for loop looks very similar to java's:
+```javascript
 // Output:
 // "Nelson"
 // "Rachel"
@@ -51,8 +56,7 @@ for(var i = 0; i < names.length; i++) {
 
 // Exercise: Print out contents of list in reverse order.
 ```
-
-Consider the function `greet(name)`
+Now, we will move onto functions. Consider the function `greet(name)`.
 
 ```javascript
 function greet(name) {
@@ -61,16 +65,15 @@ function greet(name) {
 
 greet("Nelson"); // logs "Hello Nelson"
 ```
-
-Notice how we do not have to specify the type of the parameter.
+In order to define this function, we used the `function` keyword followed by the function name, and then a comma-separated list of all the variable we expect. Notice how we do not specify the type; this is because Javascript is dynamically typed.
 
 Similarly, we could have functions that do other operations on names:
 
 ```javascript
 function reverser(name) {
     var arr = name.split("");
-    arr = arr.reverse()
-    arr= arr.join("");
+    arr = arr.reverse() // reverses the array
+    arr= arr.join(""); // joins all the elements with "" (empty string)
     console.log(arr);
 }
 
