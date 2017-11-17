@@ -80,21 +80,22 @@ var expstate = require('express-state');
 expstate.extend(app);
 ```
 
-What this does is add the `.expose()` method to `app` and all `res` objections in our routes. This means we can use the two functions `app.expose()` and `res.expose()`
+What this does is add the `.expose()` method to `app` and all `res` objections in our routes. This means we can use the two functions `app.expose()` and `res.expose()`. Now, insert the following line:
 
 ```javascript
 app.set("state namespace", 'App');
 ```
 
-What this does is set which variable our data will live under on the client. `App` can be switched out for whatever you want. 
+This sets which variable our data will live under on the client. `App` can be switched out for whatever you want. 
 
-We add these two lines like so: 
+We add these lines like so: 
 
 ```javascript
 var express = require('express');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var app = express();
+var expstate = require('express-state');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -146,6 +147,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var app = express();
+var expstate = require('express-state');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -188,6 +190,3 @@ app.get("/", function(req, res) {
 ```
 
 Now, we again have access to the movies variable on the client, through the variable `App.movies`. 
-
-Now we have a way to access server side JavaScript variables easily on the client! Check out the `code_complete` folder for a complete working example. 
-
