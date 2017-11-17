@@ -76,6 +76,7 @@ Next, in our `index.js`, we need to:
 First, we add the following two lines two our application: 
 
 ```javascript
+var expstate = require('express-state');
 expstate.extend(app);
 ```
 
