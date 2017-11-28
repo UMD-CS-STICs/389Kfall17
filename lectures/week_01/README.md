@@ -18,7 +18,7 @@ Insert the following into your `index.html` file.
 
 ```html
 <head>
-    <!-- meta-info here -->
+    <!-- meta-info here --> <!-- By the way, this is how you would write comments in HTML -->
 </head>
 <body>
     <!-- page content here -->
@@ -69,7 +69,7 @@ In the body, create an h1 element with the text content "UMD Courses".
 ### Header
 -----------
 
-There's a special tag in HTML that's just made for headers. It's called `<header>`
+There's a special tag in HTML that's just made for headers. It's called `<header>`. Do not confuse it with the `<head>` tag!
 
 ```html
 <header>
@@ -100,7 +100,7 @@ For example:
     <p class="editor-note" id="web"> this is text </p>
 ```
 
-These attributes can store extra information in the element. We can later access these attributes and the browser can special attribtues to render elements in certain ways.
+These attributes can store extra information in the element. We can later access these attributes in a certain way, to help the browser render the elements in certain ways.
 
 ### Images
 ---------
@@ -155,11 +155,17 @@ In addition to the tag name, elements can have attributes. Anchor tag has attrib
 ## CSS
 ------
 
-CSS is a way for us to make our HTML look pretty. We can use the `<style>` tag to do this.
+CSS is a way for us to make our HTML look pretty. We can use the `<style>` tag to do this. The `<style>` tag is written between the opening and closing anchor of the `<head> element like so:
 
 ```html
-<style></style>
+<head>
+    <style>
+    /* Your CSS code here... */
+    </style>
+</head>
 ```
+
+Note that comments in CSS are written using ``slash-asterisk`` notation, which is C-like.
 
 ### CSS Reset
 -------------
@@ -175,8 +181,48 @@ rel: stylesheet (relation)
 
 We use `normalize.css` simply because it is a css file that renders everything consistently with modern standards. Some tags have styling be default that we do not want.
 
+### Important: Order of link and style tags matters!
+-----------------------------------------
+It is important to note that if you write your CSS code between the `style` elements opening and closing anchor *before* you use the `link` element to link to a stylesheet, any CSS code between those anchors will be **shadowed** by CSS code inside the stylesheet **that affects the same elements**. For example, if you navigate to 
+[https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css](`https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css`) (just click on the link or copy and paste the URL  into your browser's address bar) you will notice the following CSS code:
+
+```css
+h1{ 
+    font-size: 2em;
+    margin:0.67em 0;
+}
+```
+
+We can disregard the second line of code for now. The first line, however, is of interest to us. What it does is select **all** `<h1>` elements inside our HTML file (like the one we have already written) and tell the browser to render those headers with a font size of 2em ([Wikipedia link on what em means](https://en.wikipedia.org/wiki/Em_(typography))). If we were to type the following CSS code inside our `style` element:
+
+```css
+h1{
+    font-size: 10em;
+}
+```
+
+and inserted the `style` element **underneath** our `link` element inside the `head` element, we will be **shadowing** the `font-size` CSS definition inside `normalize.css`. To convince yourselves that this is true, paste this inside your `head` element and then open `index.html` with your browser:
+
+```css
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+<style>
+    h1 {
+        font-size:10em;
+    }
+</style>
+```
+
+You should be seeing *UMD Courses* in **very** large letters. :)
+Then, switch the order around to have the `<link>` attribute **after** the `<style>` attribute. Reload your browser. What happens now?
+
+Before going forward, make sure that:
+
+    - You have erased the CSS code you wrote above, and
+    - You have your `style` element **after** the `link` element. In **all** of the subsequent exercises, we will assume that your `style` element is written **after** the `link` element.
+ 
 ### Center header
 -----------------
+Type the following CSS code inside your `style` element:
 
 ```css
 header {
@@ -206,19 +252,16 @@ li {
 }
 ```
 
-**Block vs. Inline**
+**Block vs. Inline elements**
 
-Block:
-Ex: headings, paragraphs, list items by default
-Stretch the whole width of the webpage and have line breaks before and after
+Block element examples: headings, paragraphs, list items (by default). Block elements stretch the whole width of the webpage and have line breaks before and after.
 
-Inline:
-Ex: links by default
-Take up minimum space, and exist within normal flow. No line breaks follow.
+Inline element examples: links (by default). Inline elements take up minimum space, and exist within the normal flow of the text. No line breaks precede *or* follow the element.
 
 ### Padding:
 -------------
 
+Let's expand our `li` selector with another line of code that defines the *padding* CSS property for list items:
 ```css
 li {
     display: inline;
@@ -227,36 +270,34 @@ li {
 ```
 
 When we have 1 value for padding, it sets that padding on all four sides.
-When we have 4 values, we individually define the padding for each side. The order goes: top right bottom left.
+
+When we have 4 values, we individually define the padding for each side. The order is **clockwise**: top right bottom left.
+
+We can also have 2 values. Then, we once again end up following a clockwise order: the first value is applied to the top, then the second value to the right, and then we cycle back to the first value for bottom and the second value for left. Temporarily comment out (using CSS style comments!) the second line of the CSS code above and replace it with `padding: 0px 10px;` to convince yourselves that the results are exactly the same.
 
 **Open chrome dev tools and show**
 
 ### Header styles
 -----------------
 
+Type this inside the `<style>` element:
+
 ```css
 header {
     text-align: center;
-    background: url("umd aerial photo");
+    background: url("http://www.mtech.umd.edu/news/press_releases/images/UMD_aerial_fullres.png");
     background-size: cover;
 }
 ```
 
-Now the text isn't visible, so add:
+Let's make the color of the header white to make it more compatible with our new background color:
 
 ```css
 header {
+    /* ... */
+    /* Properties you typed above ... */
+   /* ... */
     color: white; /*NEW*/
-}
-```
-
-The links stay blue because, unlike most other elements like headings and paragraphs, links dont inherit color from their parent element.
-
-We have to explicitly set the color just for the anchor elements.
-
-```css
-a {
-    color: white;
 }
 ```
 
@@ -283,7 +324,7 @@ Margin creates space on the outside, while padding creates space on the inside.
 
 ```css
 img {
-    margin: ...;
+  /*  margin definition as is */
     border: 7px solid red;
     border-radius: 20px;
     background-color: brown;
@@ -297,15 +338,17 @@ Change the background color of the navigation bar unordered list to black, and s
 
 ```css
 ul {
-    padding...;
+    /* padding definition as is */
     background: black;
 }
 ```
 
+The links stay blue because, unlike most other elements like headings and paragraphs, links dont inherit color from their parent element. In this case, the parent element of the `<a>` anchor is the `<li>` element. We only want to color the links, so we use CSS to explicitly set the color **just for the anchor elements**. We also add some more code to make links stand out more. Notably, we make the background **just for the links** gray. Reload your browser after you type this inside your `<style>` element to see how the colors co-exist around the navigation bar.
+
 ```css
 a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; /*-- No underlines below links */
     background-color: gray;
     padding: 5px;
     border-radius: 5px;
@@ -315,11 +358,19 @@ a {
 ### Articles
 ------------
 
-Wrap each article in `<article>` tag.
+Let's make some changes to the content of our text. Replace the **entire** text and `<title>` element after the `<head>` element to instead contain this:
 
-They currently stretch the whole page.
+```html
+    <article>
+        <h3>Search School Name:</h3>
+        <input type="text" placeholder="Ex: CMSC"> <!-- Gives you a text box where you can type, like in forms. -->
+        <button>Search! </button>   <!-- A button-like object that is meant to be clicked. -->
+        <button> Clear Results </button>
+    </article>
+```
+This way, our article wraps all the text that follows the header. You can find more information about the `<article>` tag on the [Mozilla Developers webpage](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article). 
 
-Making them narrower and centered makes them easier to read.
+Making articles narrower and centered makes them easier to read.
 
 ```css
 article {
@@ -328,7 +379,7 @@ article {
 }
 ```
 
-To center:
+To center them, we can define the margin on the right and the left to the value `auto`. This tells the browser to automatically balance the `<article>` element **based on the parent element's width** (so, when specified on the left and right, it centers it horizontally). In this case, the parent element is `<body>`. `normalize.css` defines the margin of the `<body>` to be 0, and we have not added a selector for `body` between the `<style>` tags. Therefore, `<body>` will expand to fill the entire web browser tab.
 
 ```css
 article {
@@ -338,14 +389,12 @@ article {
 }
 ```
 
-`margin: 0 auto` sets the top an bottom margins to 0, and left and right margins are automatically set to center the element.
-
-This is a very good trick used all the time.
+Using `auto` cleverly is a very good trick used all the time.
 
 ### Responsiveness
 ------------------
 
-Try resizing the browser to see how the website reacts.
+Try resizing the browser to see how the website reacts. It is important to realize that our website needs to adapt to many situations, and one of the most basic ones are a use resizing the browser window. More complex ones include viewing websites through phones, tablets, small and big resolution computers, and different operating systems/browsers. This adaptability of a website to numerous client-side variations is called its **responsiveness**. Building responsive websites is of paramount importance.
 
 ### Responsiveness for navigation
 ---------------------------------
@@ -360,7 +409,7 @@ Try adding this CSS rule, and then resizing the webpage:
 }
 ```
 
-When you make the webpage less than 500px wide, the webpage turns red.
+Now, when you make the webpage less than 500px wide, the webpage should turn red.
 
 Here are several rules to enable when the website becomes to small. Paste them in and try resizing the browser now.
 
@@ -370,7 +419,7 @@ Here are several rules to enable when the website becomes to small. Paste them i
         font-size: 36px;
     }
     li {
-        display: block; /*Makes them next to each other*/
+        display: block; /*Makes the links stack on top of each other*/
         padding: 7px 0 7px 0; /*Change the padding to top and bottom now*/
     }
     a {
@@ -383,10 +432,7 @@ Let's make one last style change to the links:
 
 ```css
 a {
-    color: white;
-    text-decoration: none;
-    background-color: gray;
-    padding: 5px 100px 5px 100px;
-    border-radius: 5px;
+    /* All other properties as they were... */   
+    padding: 5px 100px;
 }
 ```
