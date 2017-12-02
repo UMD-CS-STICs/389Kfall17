@@ -184,12 +184,12 @@ There is a provided a shell that has all the dependencies you need set up. We ha
 
 5. **Navigation Pages**
 
-    On the home `/` page, you should also have a **navigation bar**. This navigation bar will have **5 links**, and should be visible on every page. 
+    On the home `/` page, you should also have a **navigation bar**. This navigation bar will have **5 links** (one of them should be home), and should be visible on every page. 
 
     The navigation bar links should filter your data in some way. 
 
     As an example, for the Dogs example, we could have: 
-    - Heavy Dogs: Lists all dogs over 20.0 pounds
+    - Home: All dogs
     - Select a Breed: Displays a list of breeds that you can use to filter. 
     - Young Dog: Lists all dogs younger than 4 years old. 
     - Random Dog: Showcases a random dog. 
@@ -202,7 +202,7 @@ There is a provided a shell that has all the dependencies you need set up. We ha
     (15 pt) 5 pages linked to from the navigation bar that display the appropriate filtered data. 
 
     In `documentation.md`, you will need to include: 
-    - Each of the 5 navigation filters
+    - Each of the navigation filters
     - The routes for each of the additional pages
     
     **`documentation.md` example**:
@@ -210,7 +210,7 @@ There is a provided a shell that has all the dependencies you need set up. We ha
     ### 5. Navigation Pages
 
     Navigation Filters
-    1. Heavy Dogs -> `/heaviest`
+    1. Home -> `/`
     2. Select a Breed -> `/breed/:breed_name`
     3. Young Dog -> `/youngest`
     4. Random Dog -> `/random`
