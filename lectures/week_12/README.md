@@ -1,4 +1,4 @@
-# Week 10
+# Week 12
 
 This week we went over **git**, **hosting**, and **express-state**. 
 
