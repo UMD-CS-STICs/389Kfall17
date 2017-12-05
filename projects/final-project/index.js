@@ -14,11 +14,6 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 app.use('/public', express.static('public'));
 
-/* Add whatever endpoints you need! Remember that your API endpoints must
- * have '/api' prepended to them. Please remember that you need at least 5 
- * endpoints for the API, and 5 others. 
- */
-
 app.listen(3000, function() {
     console.log('House of Representatives listening on port 3000!');
 });
