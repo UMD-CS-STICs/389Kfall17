@@ -164,9 +164,7 @@ There is a provided a shell that has all the dependencies you need set up. We ha
     
     - (15 pt) As the user types in the search bar, filter the results on the page   to those that match the search query. The results should be **auto-updating**. This means that for every keystroke, the results should be updated. The page should NOT refresh while typing and searching. 
     - (5 pt) If there is no match, then display text indicating that there are no   matches. 
-    
-    Note: Feel free to use any **NPM Modules** to help you complete this task. 
-    
+        
     **Example:**
     
     I chose to implement search on Dog names. Suppose I have dogs `"nelson"`,  `"nelley"`, and `"noslen"`. As soon as I type `"Ne"` (without hitting enter), the  list should be filtered to only include `"nelson"` and `"nelley"`. If I type `"Nee"`, then I should see something like "There are no dogs with the name "Nee". 
