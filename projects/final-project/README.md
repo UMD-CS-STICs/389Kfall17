@@ -220,6 +220,8 @@ There is a provided a shell that has all the dependencies you need set up. We ha
 
 We will be using [now](https://zeit.co/now) to submit one link per project. We will go over how to use this in class on 12/1.
 
+Please submit your documentation file with the now link at the top.
+
 ### Additional Comments
 
 You can use mlab for a free MongoDB instance. Read the instructions [here](http://google.com) for instructions.
