@@ -218,9 +218,13 @@ There is a provided a shell that has all the dependencies you need set up. We ha
 
 ### Submission
 
-We will be using [now](https://zeit.co/now) to submit one link per project. We will go over how to use this in class on 12/1.
+We will be using [now](https://zeit.co/now) to host the project and submit a link to a live demo. Please follow the instructions here on how to host: https://github.com/UMD-CS-STICs/389Kfall17/tree/master/lectures/week_13
 
-Please submit your documentation file with the now link at the top.
+Zip up your entire project and upload it to the submit server!
+
+BE SURE TO NOT INCLUDE THE node_modules FOLDER WHEN UPLOADING. Simply delete the node_modules directory before submitting. We will re-install the modules when testing.
+
+Include your documentation file with the now link at the top in the project directory. 
 
 ### Additional Comments
 
