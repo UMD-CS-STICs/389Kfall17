@@ -176,7 +176,7 @@ Now, we take the `movieSchema` object and associate it with a certain model. The
 
 ```js
 var Movie = mongoose.model('Movie', movieSchema);
-module.exports = { Movie };
+module.exports = Movie;
 ```
 
 Now, please open up the `.env` file sitting in the project's root. Replace the text `YOUR URL HERE` with your link from [mlab.com](mlab.com). Now, please open the `index.js` file. Let us go over some existing code.
